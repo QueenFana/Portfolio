@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="favicon.icon" href="image/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Mon portfolio</title>
+</head> 
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+              <img src="image/logo1.png" class="logo" style="width: 140px;">
+              <ul>
+                <li><a href="#Accueil">Accueil</a></li>
+                <li><a href="#About">A Propos de moi</a></li>
+                <li><a href="# Services">Services</a></li>
+                <li><a href="#Portfolio">Portfolio</a></li>
+                <li><a href="#Contact">Contact</a></li>
+              </ul>
+            </nav>
+
+            <div class="header-text" id="Accueil">
+                <p>Web Developper</p>
+                <h1>Salut, je suis <span>SABOUTOU <br></span>Fananatou  du Togo</h1>
+            </div>
+        </div>
+    </div>
+    <!!!   a props de moi >
+    <div id="About">
+        <div class="container">
+            <hr>
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="image/img2.jpeg">
+                </div>
+                <div class="about-col-2">
+                    <h1  class="sub-title">A Propos de moi</h1>
+                    <p> <br> En quête de ma passion pour faire la filière qui me correspond, je me<br> suis  perdue mille et une fois. J'ai fait le tour des concours en médecine, <br>en  architecture et même dans l'armée. Deux ans après mon baccalauréat,<br> je  n'étais avancée en rien dans mes études, mais la troisième année fut la <br> bonne. Je me suis inscrite en informatique pour la forme mais au fur et à <br>mesure que l'année avancait ,j'ai pris goût et me voilà aujourd'hui plus qu'<br>épanouie dans mes études.J'ai pour objectif
+                        d'atteindre le succès financier <br> en devenant la meilleure développeuse que le Togo ait jamais vue et ainsi<br> créer ma propre entreprise.
+                    </p>
+                    <p>En tant que développeuse web je prône la créativité, la qualité, l'innovation,<br> la patience et surtout la persévérance. Selon moi <span>"la clé de la reussite est la persévérance."</span>
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab(Skills)"> Compétences</p>
+                        <p class="tab-links active-link"   onclick="opentab(Experience)"> Expériences</p>
+                        <p class="tab-links  active-link"   onclick="opentab(Education)"> Formations</p>
+                    </div>
+
+                    <div class="tab-contents  active-tab" id="Skills">
+                        <ul>
+                            <li><span>Graphisme</span><br>Conception de logos et d'affiches</li>
+                            <li><span>Developement web</span><br>Conception de sites web</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents  active-tab"   id="Experience">
+                        <ul>
+                            <li><span>2022-2024</span><br>En attente</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tab-contents  active-tab" id="Education">
+                        <ul>
+                            <li><span>2022-2024</span><br>Formation en Développement web et mobile à FORMATEC</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!   Services  >
+    <div id="Services">
+        <div class="container">
+            <h1 class="sub-title">Mes Services</h1>
+            <div class="services-list">
+                <div>
+                    <h2>Développement Web</h2>
+                    <p>Pour tout vos besoins de conception de sites web</p>
+                    <a href="#">learn more</a>
+                </div>
+
+                <div>
+                    <h2>Graphisme</h2>
+                    <ol>
+                        <li>Conception d'affiches</li>
+                        <li>Conception de logos</li>
+                    </ol>
+                    <a href="#">learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!  Portfolio  >
+    <div id="Portfolio">
+        <div class="container">
+            <h1 class="sub-title">Mes oeuvres :</h1>
+            <hr>
+            <h1 class="sub-title">En Graphisme :</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="image/logo.png" alt="">
+                    <div class="layer">
+                        <h3>Logo</h3>
+                        <p>Ce logo est le mien et a été conçu par moi même</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="image/logo1.png" alt="">
+                    <p>déclinaison du premier</p>
+                </div>
+                <div class="work">
+                    <img src="image/logo2.png"  alt="">
+                    <span>Déclinaison du premier</span>
+                </div>
+                <div class="work">
+                    <img src="image/logo001.png"  alt="">
+                    <p>Ce logo a été conçu pour un petit business de chouchous</p>
+                </div>
+                <div class="work">
+                    <img src="image/logo002.png"  alt="">
+                    <p>Celui-là est la version transparente du dernier</p>
+                </div>
+                <div class="work">
+                    <img src="image/Z.png">
+                </div>
+                <div class="work">
+                    <img src="image/Zafan accessoires.png">
+                    <p>Affiche publicitaire</p>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+            <hr>
+            <h1 class="sub-title">En Développement web</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="image/img3.jpeg" alt="">
+                    <p>Exemple de site pour un milk-bar</p>
+                </div>
+                <div class="work">
+                    <img src="image/img4.jpeg" alt="">
+                    <p>Exemple de site pour un photographe</p>
+                </div>
+                <div class="work">
+                    <img src="image/img5.jpeg" alt="">
+                    <p>Exemple de site pour un cv</p>
+                </div>
+                <div class="work">
+                    <img src="image/img6.jpeg" alt="">
+                    <p>Exemple de site pour un compte à rebours </p>
+                </div>
+                <div class="work">
+                    <img src="image/img7.jpeg" alt="">
+                    <p>Exemple de site montrant une montre digitale </p>
+                </div>
+                <div class="work">
+                    <img src="image/img8.jpeg" alt="">
+                    <p>Exemple de site calculatrice </p>
+                </div>
+                <div class="work">
+                    <img src="image/img9.jpeg" alt="">
+                    <p>Exemple de site pour un fastfood</p>
+                </div>
+                <div class="work">
+                    <img src="image/img10.jpeg" alt="">
+                    <p>Exemple de site e-commerce </p>
+                </div>
+                <div class="work">
+                    <img src="image/img11.jpeg" alt="">
+                    <p>Exemple de site utilisant juste du css </p>
+                </div>
+                <div class="work">
+                    <img src="image/img12.jpeg" alt="">
+                    <p>Exemple de site e-commerce  </p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <! contact   >
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contacte Moi:</h1>
+                    <p>
+                        <img src="image/mail.png" width="30px" height="30px" >
+                        
+                        <label for="email">saboutoufananatoupro@gmail.com</label>
+                    </p>
+                    <p>
+                        <img src="image/maps.png"  width="30px" height="30px">
+                        "Lomé-Togo"
+                    </p>
+                    <p>
+                        <img src="image/tele.png"  width="30px" height="30px"> 
+                       "0022893919269" 
+                    </p>
+                    <div class="social-icons">
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                        <a href=""><i class="fab fa-twitter-square"></i></a>
+                        <a href="">
+                            <img src="image/l.png"  width="30px" height="30px">
+                            "SABOUTOU Fananatou"
+                        </a>
+                    </div>
+                    <a href="CV.pdf" class="btn btn2">Voir mon cv</a>
+                </div>
+                <div class="contact-right">
+                    <form action="" method="POST">
+                        <label for="name">Nom:</label>
+                        <input type="text" id="name" name="name" required><br><br>
+                        
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required><br><br>
+                        
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" required></textarea><br><br>
+                        
+                        <button type="submit">Envoyer</button>
+                             
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p> <img src="image/copyright.jpeg" width="30px" height="30px" >copyright.Fait avec amour par Queenfana</p>
+        </div>
+    </div>
+</body>
+</html>
