@@ -1,240 +1,270 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" type="favicon.icon" href="image/logo.png">
+    <link href="boxicons-master/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aYij0b3hwoIqC9btogwGOJhHfH3FFH9I5StRT/7cBdcIyb8aMCY0qQ5NI7DQfsxR" crossorigin="anonymous">
+    <link rel="shortcut icon" type="favicon.icon" href="image/nana.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Merriweather:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <title>Mon portfolio</title>
 </head> 
 <body>
-    <div id="header">
-        <div class="container">
-            <nav>
-              <img src="image/logo1.png" class="logo" style="width: 140px;">
-              <ul>
+    <header class="header">
+        <div class="logo">Fananatou</div>
+        <nav class="nav">
+            <ul>
                 <li><a href="#Accueil">Accueil</a></li>
                 <li><a href="#About">A Propos de moi</a></li>
-                <li><a href="# Services">Services</a></li>
-                <li><a href="#Portfolio">Portfolio</a></li>
-                <li><a href="#Contact">Contact</a></li>
+                <li><a href="#Services">Services</a></li>
+                <li><a href="#Formations">Formations </a></li>
+                <li><a href="#Skills">Compétences</a></li>
+                <li><a href="#Contact"> Contact </a></li>
+                <li><a href="#Projets"> Projets </a></li>
               </ul>
-            </nav>
+        </nav>
+        <button class="menu">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+    </header>    
 
-            <div class="header-text" id="Accueil">
-                <p>Web Developper</p>
-                <h1>Salut, je suis <span>SABOUTOU <br></span>Fananatou  du Togo</h1>
-            </div>
-        </div>
+    <div class="content" id="Accueil"><br><br><br>
+        <h1>Hi!! Je suis <br>SABOUTOU <br> Fananatou</h1><br>
+        <div class="typewriter">
+          <h5>JE SUIS <span id="text">Mobile Developper</span><span class="cursor">Web developper</span></h5>
+        </div><br><br>
     </div>
-    <!!!   a props de moi >
-    <div id="About">
+
+    <!--a props de moi-->
+    <div id="About"><br>
+        <h1  class="sub-title">A Propos de moi</h1>
         <div class="container">
-            <hr>
             <div class="row">
                 <div class="about-col-1">
-                    <img src="image/img2.jpeg">
+                    <img src="image/nono.jpg" alt="">
                 </div>
-                <div class="about-col-2">
-                    <h1  class="sub-title">A Propos de moi</h1>
-                    <p> <br> En quête de ma passion pour faire la filière qui me correspond, je me<br> suis  perdue mille et une fois. J'ai fait le tour des concours en médecine, <br>en  architecture et même dans l'armée. Deux ans après mon baccalauréat,<br> je  n'étais avancée en rien dans mes études, mais la troisième année fut la <br> bonne. Je me suis inscrite en informatique pour la forme mais au fur et à <br>mesure que l'année avancait ,j'ai pris goût et me voilà aujourd'hui plus qu'<br>épanouie dans mes études.J'ai pour objectif
-                        d'atteindre le succès financier <br> en devenant la meilleure développeuse que le Togo ait jamais vue et ainsi<br> créer ma propre entreprise.
-                    </p>
-                    <p>En tant que développeuse web je prône la créativité, la qualité, l'innovation,<br> la patience et surtout la persévérance. Selon moi <span>"la clé de la reussite est la persévérance."</span>
-                    </p>
+                <div class="about-col-2"><br><br><br>
+                    <p>Je suis une jeune développeuse passionée et ambitieuse en quête d'apprendre et de créer de projets innovants. <br>
+                    J'aspire à devenir l'une des meilleures analystes programmeurs.</p><br>
+                    <h4>Nom : SABOUTOU</h4> <br><br>
+                    <h4>Prénom : Fananatou</h4> <br><br>
+                    <h4>Née le : 12/07/2002 à Lomé</h4> <br><br>
+                    <h4> Email: saboutoufananatoupro@gmail.com</h4><br><br>
+                    <h4>Nationalité : Togolaise</h4><br><br>
 
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab(Skills)"> Compétences</p>
-                        <p class="tab-links active-link"   onclick="opentab(Experience)"> Expériences</p>
-                        <p class="tab-links  active-link"   onclick="opentab(Education)"> Formations</p>
-                    </div>
 
-                    <div class="tab-contents  active-tab" id="Skills">
-                        <ul>
-                            <li><span>Graphisme</span><br>Conception de logos et d'affiches</li>
-                            <li><span>Developement web</span><br>Conception de sites web</li>
-                        </ul>
-                    </div>
+                    <a href="CV_SABOUTOU.pdf" class="btn-pink"><i class="bx bx-download"></i>Télécharger mon cv</a>
 
-                    <div class="tab-contents  active-tab"   id="Experience">
-                        <ul>
-                            <li><span>2022-2024</span><br>En attente</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="tab-contents  active-tab" id="Education">
-                        <ul>
-                            <li><span>2022-2024</span><br>Formation en Développement web et mobile à FORMATEC</li>
-                        </ul>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!   Services  >
-    <div id="Services">
+    <!--Services-->
+    <div id="Services"><br>
+        <h1 class="sub-title">Services</h1>
         <div class="container">
-            <h1 class="sub-title">Mes Services</h1>
             <div class="services-list">
-                <div>
+                <div class="col-1">
                     <h2>Développement Web</h2>
-                    <p>Pour tout vos besoins de conception de sites web</p>
-                    <a href="#">learn more</a>
+                    <p>Vous avez besoin d'un site web statique ou dynamique qui montre vos activités ou votre portfolio, pas de soucis, vous êtes à la bonne adresse</p>
                 </div>
 
-                <div>
+
+                <div class="col-2">
+                    <h2>Développement mobile</h2>
+                    <p>Pour tout vos besoins de conception d'applications mobiles (android, ios ...)</p>
+                </div>
+
+                <div class="col-3">
                     <h2>Graphisme</h2>
                     <ol>
                         <li>Conception d'affiches</li>
                         <li>Conception de logos</li>
+                        <li>Conception de logos</li>
+                        <li>Conception de flyers</li>
                     </ol>
-                    <a href="#">learn more</a>
                 </div>
             </div>
         </div>
     </div>
+    
 
-    <!  Portfolio  >
-    <div id="Portfolio">
+    <!--Skills-->
+    <div id="Skills"><br><br>
+        <h1 class="sub-title">Compétences</h1><br><br>
+        
         <div class="container">
-            <h1 class="sub-title">Mes oeuvres :</h1>
-            <hr>
-            <h1 class="sub-title">En Graphisme :</h1>
-            <div class="work-list">
-                <div class="work">
-                    <img src="image/logo.png" alt="">
-                    <div class="layer">
-                        <h3>Logo</h3>
-                        <p>Ce logo est le mien et a été conçu par moi même</p>
-                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                    </div>
+            <div class="services-list">
+                <div class="col-1">
+                    <i class="bx bx-brush skill-icon"></i>
+                    <h2>CANVA</h2>
                 </div>
-                <div class="work">
-                    <img src="image/logo1.png" alt="">
-                    <p>déclinaison du premier</p>
-                </div>
-                <div class="work">
-                    <img src="image/logo2.png"  alt="">
-                    <span>Déclinaison du premier</span>
-                </div>
-                <div class="work">
-                    <img src="image/logo001.png"  alt="">
-                    <p>Ce logo a été conçu pour un petit business de chouchous</p>
-                </div>
-                <div class="work">
-                    <img src="image/logo002.png"  alt="">
-                    <p>Celui-là est la version transparente du dernier</p>
-                </div>
-                <div class="work">
-                    <img src="image/Z.png">
-                </div>
-                <div class="work">
-                    <img src="image/Zafan accessoires.png">
-                    <p>Affiche publicitaire</p>
-                </div>
-            </div>
-            <a href="#" class="btn">See more</a>
-            <hr>
-            <h1 class="sub-title">En Développement web</h1>
-            <div class="work-list">
-                <div class="work">
-                    <img src="image/img3.jpeg" alt="">
-                    <p>Exemple de site pour un milk-bar</p>
-                </div>
-                <div class="work">
-                    <img src="image/img4.jpeg" alt="">
-                    <p>Exemple de site pour un photographe</p>
-                </div>
-                <div class="work">
-                    <img src="image/img5.jpeg" alt="">
-                    <p>Exemple de site pour un cv</p>
-                </div>
-                <div class="work">
-                    <img src="image/img6.jpeg" alt="">
-                    <p>Exemple de site pour un compte à rebours </p>
-                </div>
-                <div class="work">
-                    <img src="image/img7.jpeg" alt="">
-                    <p>Exemple de site montrant une montre digitale </p>
-                </div>
-                <div class="work">
-                    <img src="image/img8.jpeg" alt="">
-                    <p>Exemple de site calculatrice </p>
-                </div>
-                <div class="work">
-                    <img src="image/img9.jpeg" alt="">
-                    <p>Exemple de site pour un fastfood</p>
-                </div>
-                <div class="work">
-                    <img src="image/img10.jpeg" alt="">
-                    <p>Exemple de site e-commerce </p>
-                </div>
-                <div class="work">
-                    <img src="image/img11.jpeg" alt="">
-                    <p>Exemple de site utilisant juste du css </p>
-                </div>
-                <div class="work">
-                    <img src="image/img12.jpeg" alt="">
-                    <p>Exemple de site e-commerce  </p>
-                </div>
-            </div>
-            
-        </div>
-    </div>
 
-    <! contact   >
-    <div id="contact">
+
+                <div class="col-2">
+                    <i class="bx bx-camera skill-icon"></i>
+                    <h2>LIGHTROOM</h2>
+                </div>
+            </div>
+        </div>
         <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-title">Contacte Moi:</h1>
-                    <p>
-                        <img src="image/mail.png" width="30px" height="30px" >
-                        
-                        <label for="email">saboutoufananatoupro@gmail.com</label>
-                    </p>
-                    <p>
-                        <img src="image/maps.png"  width="30px" height="30px">
-                        "Lomé-Togo"
-                    </p>
-                    <p>
-                        <img src="image/tele.png"  width="30px" height="30px"> 
-                       "0022893919269" 
-                    </p>
-                    <div class="social-icons">
-                        <a href=""><i class="fab fa-instagram"></i></a>
-                        <a href=""><i class="fab fa-twitter-square"></i></a>
-                        <a href="">
-                            <img src="image/l.png"  width="30px" height="30px">
-                            "SABOUTOU Fananatou"
-                        </a>
-                    </div>
-                    <a href="CV.pdf" class="btn btn2">Voir mon cv</a>
+            <div class="services-list">
+                <div class="col-1">
+                    <i class="bx bxl-html5 skill-icon"></i>
+                    <h2>HTML/CSS</h2>
                 </div>
-                <div class="contact-right">
-                    <form action="" method="POST">
-                        <label for="name">Nom:</label>
-                        <input type="text" id="name" name="name" required><br><br>
-                        
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required><br><br>
-                        
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" required></textarea><br><br>
-                        
-                        <button type="submit">Envoyer</button>
-                             
-                    </form>
 
+
+                <div class="col-2">
+                    <i class="bx bxl-javascript skill-icon"></i>
+                    <h2>JAVASCRIPT</h2>
+                </div>
+
+                <div class="col-3">
+                    <i class="bx bxl-bootstrap skill-icon"></i>
+                    <h2>BOOTSTRAP</h2>
                 </div>
             </div>
         </div>
-        <div class="copyright">
-            <p> <img src="image/copyright.jpeg" width="30px" height="30px" >copyright.Fait avec amour par Queenfana</p>
+        
+        <div class="container">
+            <div class="services-list">
+                <div class="col-1">
+                    <i class="bx bxs-data skill-icon"></i>
+                    <h2>MYSQL</h2>
+                </div>
+
+
+                <div class="col-2">
+                    <i class="bx bxl-php skill-icon"></i>
+                    <h2>PHP</h2>
+                </div>
+                
+                <div class="col-2">
+                    <i class="bx bxl-java skill-icon"></i>
+                    <h2>JAVA</h2>
+                </div>
+
+                <div class="col-3">
+                    <i class="bx bx-layer skill-icon"></i>
+                    <h2>LARAVEL</h2>
+                </div>
+            </div>
         </div>
     </div>
+
+    <!--Formations-->
+    <div id="Formations"><br><br>
+        <h1 class="sub-title">Formations</h1>
+        <div class="Formations">
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Licence en Informatique</h3>
+                    <span>ESIBA | 2024 - Aujourd'hui</span>
+                    <p>Formation approfondie en développement web et mobile,gestion de projets informatiques, bases de données et programmation.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Programme "Filles aux commandes"</h3>
+                    <span>PLAN-TOGO | Septembre - Novembre 2024</span>
+                    <p>Un des programmes phares de plan-togo qui constitue à faire des jeunes filles des leaders de demain en leur inculquant la notion
+                        d'ambition et de ne pas baisser les bras car rien n'est impossible même pour les filles/femmes. La phase de formation nous a inculqué 
+                        des méthodes d'élaboration de CV, de lettre de motivation  et la préparation pour un entretien d'embauche.
+                    </p>
+                    <p>J'ai été pendant deux jours, la directrice du "Sponsorship Managament " de PLAN-Maritime. Cette expérience m'a permis de savoir
+                        qu'il ne faut jamais abandonner ses rêves et de se battre pour les réaliser.
+                    </p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Programmes NANATECH-TALENTS</h3>
+                    <span>Gouvernement togolais | Juin - Novembre 2024</span>
+                    <p>Un programme très enrichissant du gouvernement réservé aux filles. Grâce à ce programme, j"ai développé des connaissances
+                        en gestion de projets, en entrepreunariat ainsi qu' en compétences non techniques comme le travail en équipe, la prise de décision 
+                        et la pensée critique. 
+                    </p>
+                </div>
+                <div class="timeline-item">
+                    <h3>BTS</h3>
+                    <span>FORMATEC | 2022 - 2024</span>
+                    <p>Formation approfondie en développement web, bases de données et programmation.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--contact-->
+    <div id="Contact"><br>
+        <h1 class="sub-title"> Mes contacts</h1>
+        <div class="container">
+
+            <div class="services-list">
+
+                <div class="col-1">
+                    <h2>Adresse:</h2>
+                    <p> <i class="bx bx-map"></i>Agoè-Assiyéyé</p>
+                </div>
+
+
+                <div class="col-2">
+                    <h2>Contact:</h2>
+                    <p><i class="bx bxl-telephone"></i> 00228 96530434</p>
+                </div>
+                
+                <div class="col-1">
+                    <h2>Email:</h2>
+                    <p><i class="bx bxl-mail"></i> saboutoufananatoupro@gmail.com</p>
+                </div>
+
+            </div><br>
+
+        </div>
+    </div><br><br>
+
+    <!--Projets-->
+    <div id="Projets" class="center">
+        <h1 class="sub-title">Projets</h1>
+        <a class="btn-pink"><i class="bx bx-loading"></i>Coming soon!!</a>
+        <p></p>
+    </div>
+
+
+    <footer class="footer-distributed">
+        
+       <div class="footer-left">
+            <div class="logo">Fananatou</div><br>
+            <p class="footer-links">
+                <a href="#Accueil">Accueil |</a>
+                <a href="#About">A Propos |</a>
+                <a href="#Services">Services |</a>
+                <a href="#Contact">Contact |</a>
+                <a href="#Formations">Formations |</a>
+                <a href="#Skills">Compétences |</a>
+                <a href="#Projets"> Projets |</a>
+            </p>
+        </div>
+
+        <div class="footer-center">
+            <br><br>
+            <p>&copy; 2024 MonPortfolio. Tous droits réservés.</p>
+        </div>
+
+        <div class="footer-right">
+            <h5>Suivez-moi</h5>
+            <div class="social-icons">
+               <a href="#"><i class="bx bxl-facebook"></i></a>
+               <a href="#"><i class="bx bxl-youtube"></i></a>
+               <a href="#"><i class="bx bxl-linkedin"></i></a>
+               <a href="#"><i class="bx bxl-github"></i></a>
+           </div>
+        </div>
+
+        
+    </footer>
 </body>
 </html>
