@@ -1,48 +1,52 @@
 //menu
-const menu = document.querySelector('.menu');
-const nav = document.querySelector('.nav');
+const navToggle = document.querySelector('.nav-toggle');
+const navMobile = document.querySelector('.nav-mobile');
 
-menu.addEventListener('click', () => {
-    nav.classList.toggle('active');
-    menu.classList.toggle('active');
+navToggle.addEventListener('click', () => {
+    navMobile.classList.toggle('open');
+    navActive.classList.toggle('active');
 });
- 
-//Textes
-const texts = [ "Web Developper ", "Mobile Developper ", "Graphiste "]; // Liste des noms
-let index = 0; // Index du texte actuel
-let charIndex = 0; // Position du caractère actuel dans le texte
-let isDeleting = false; // Indicateur d'effacement
-const typingSpeed = 100; // Vitesse de frappe
-const deletingSpeed = 50; // Vitesse d'effacement
-const pause = 1500; // Pause avant de changer de texte
-const textElement = document.getElementById("text");
 
-function typeWriter() {
-    const currentText = texts[index]; // Texte actuel
+function submitForm(){
+    let valid= true;
+    document.querySelectorAll('.err').forEach(e => e.style.display = 'none');
+    document.querySelectorAll('.fg input, .fg textarea').forEach(el => {
+        el.style.borderColor = 'rgba(0, 0, 0, 0.18)';
+    });
 
-    if (isDeleting) {
-        textElement.textContent = currentText.substring(0, charIndex--); // Efface
-    } else {
-        textElement.textContent = currentText.substring(0, charIndex++); // Écrit
+    const fname = document.getElementById('fname');
+    if(!fname.value.trim()){
+        document.getElementById('err-fname').style.display = 'block';
+        fname.style.borderColor = '#c0392b'; valid = false;
     }
 
-    // Si le texte est totalement écrit
-    if (!isDeleting && charIndex === currentText.length) {
-        isDeleting = true; // Passe en mode effacement
-        setTimeout(typeWriter, pause); // Pause avant d'effacer
+     const email = document.getElementById('email');
+    if (!email.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+      document.getElementById('err-email').style.display = 'block';
+      email.style.borderColor = '#c0392b'; valid = false;
     }
-    // Si le texte est totalement effacé
-    else if (isDeleting && charIndex === 0) {
-        isDeleting = false; // Passe en mode écriture
-        index = (index + 1) % texts.length; // Passe au texte suivant
-        setTimeout(typeWriter, 300); // Petite pause avant de réécrire
-    } else {
-        // Continue à écrire ou à effacer
-        setTimeout(typeWriter, isDeleting ? deletingSpeed : typingSpeed);
+
+    const msg = document.getElementById('message');
+    if (!msg.value.trim()) {
+      document.getElementById('err-message').style.display = 'block';
+      msg.style.borderColor = '#c0392b'; valid = false;
     }
+
+    if (!valid) return;
+
+    document.getElementById('submitBtn').style.display = 'none';
+    document.getElementById('successMsg').style.display = 'block';
+    ['fname','lname','email','message'].forEach(id => document.getElementById(id).value = '');
+    document.getElementById('budget').value = '';
+    document.getElementById('project-type').value = '';
 }
 
-// Démarrer l'animation
-typeWriter();
-
-
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+});

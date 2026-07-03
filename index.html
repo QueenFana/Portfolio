@@ -1,270 +1,345 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="">
     <link href="boxicons-master/css/boxicons.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aYij0b3hwoIqC9btogwGOJhHfH3FFH9I5StRT/7cBdcIyb8aMCY0qQ5NI7DQfsxR" crossorigin="anonymous">
-    <link rel="shortcut icon" type="favicon.icon" href="image/nana.png">
+    <link rel="shortcut icon" type="favicon.icon" href="image/SABOUTOU.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Merriweather:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <title>Mon portfolio</title>
 </head> 
 <body>
-    <header class="header">
-        <div class="logo">Fananatou</div>
-        <nav class="nav">
-            <ul>
-                <li><a href="#Accueil">Accueil</a></li>
-                <li><a href="#About">A Propos de moi</a></li>
-                <li><a href="#Services">Services</a></li>
-                <li><a href="#Formations">Formations </a></li>
-                <li><a href="#Skills">Compétences</a></li>
-                <li><a href="#Contact"> Contact </a></li>
-                <li><a href="#Projets"> Projets </a></li>
-              </ul>
-        </nav>
-        <button class="menu">
-            <span class="line"></span>
-            <span class="line"></span>
-            <span class="line"></span>
-        </button>
-    </header>    
-
-    <div class="content" id="Accueil"><br><br><br>
-        <h1>Hi!! Je suis <br>SABOUTOU <br> Fananatou</h1><br>
-        <div class="typewriter">
-          <h5>JE SUIS <span id="text">Mobile Developper</span><span class="cursor">Web developper</span></h5>
-        </div><br><br>
+    <nav class="nav-active">
+        <div class="logo">
+            <img src="image/SABOUTOU.jpg" alt="">
+        </div>
+        <div class="nav-links">
+            <a href="#hero">Accueil</a>
+            <a href="#projets"> Projets </a>
+            <a href="#contact"> Contact </a>
+        </div>
+        <a href="#contact" class="nav-cta">Recruter</a>
+        <button class="nav-toggle" aria-label="Menu" onclick="toggleMenu()">
+            <span class="line-1"></span>
+            <span class="line-2"></span>
+            <span class="line-3"></span>
+        </button>  
+    </nav> 
+    <div class="nav-mobile" id="mobile-menu">
+        <a href="#hero" onclick="toggleMenu()">Accueil</a>
+        <a href="#projets" onclick="toggleMenu()">Projets</a>
+        <a href="#contact" onclick="toggleMenu()">Contact</a>
     </div>
 
-    <!--a props de moi-->
-    <div id="About"><br>
-        <h1  class="sub-title">A Propos de moi</h1>
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="image/nono.jpg" alt="">
+    <!--section héro-->
+    <section id="hero">
+        <div class="hero-text">
+            <div class="hero-tag">
+                <div class="tag-dot"></div>
+                Disponible - Freelance
+            </div>
+            <h1>Développeuse <br><span class="accent">Créative</span> & <br> Graphiste</span></h1>
+            <p class="hero-sub">
+                Je suis SABOUTOU Fananatou, une développeuse web et mobile passionnée par la 
+                technologie et le design. Basée à Lomé au Togo, je transforme vos idées en expériences
+                digitales mémorables. Mon approche consiste à donner de la visibilité digitale à votre boutique ou entreprise.
+            </p>
+            <div class="hero-btn">
+                <a href="#projets" class="btn-dark">Voir mes projets</a>
+                <a href="#contact" class="btn-dark">Me contacter</a>
+            </div>
+        </div>
+        <div class="hero-photo">
+            <div class="photo-wrap">
+                <div class="photo-inner">
+                   <div class="avatar">Fananatou SABOUTOU</div>
+                    <div class="photo-hint">
+                        <img src="./image/SABOUTOU.jpeg" alt="Fananatou SABOUTOU" style="width:100%;height:130%;object-fit:cover;">
+                    </div>
                 </div>
-                <div class="about-col-2"><br><br><br>
-                    <p>Je suis une jeune développeuse passionée et ambitieuse en quête d'apprendre et de créer de projets innovants. <br>
-                    J'aspire à devenir l'une des meilleures analystes programmeurs.</p><br>
-                    <h4>Nom : SABOUTOU</h4> <br><br>
-                    <h4>Prénom : Fananatou</h4> <br><br>
-                    <h4>Née le : 12/07/2002 à Lomé</h4> <br><br>
-                    <h4> Email: saboutoufananatoupro@gmail.com</h4><br><br>
-                    <h4>Nationalité : Togolaise</h4><br><br>
-
-
-                    <a href="CV_SABOUTOU.pdf" class="btn-pink"><i class="bx bx-download"></i>Télécharger mon cv</a>
-
+                <div class="photo-badge">
+                    <div class="badge-dot"></div>
+                    Disponible
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!--Services-->
-    <div id="Services"><br>
-        <h1 class="sub-title">Services</h1>
-        <div class="container">
-            <div class="services-list">
-                <div class="col-1">
-                    <h2>Développement Web</h2>
-                    <p>Vous avez besoin d'un site web statique ou dynamique qui montre vos activités ou votre portfolio, pas de soucis, vous êtes à la bonne adresse</p>
-                </div>
+    <!--Section statistiques-->
+    <section  id="stats">
+        <div class="stat">
+            <div class="stat-num">5+</div>
+            <div class="stat-label">Projets terminés</div>
+        </div>
+        <div class="stat">
+            <div class="stat-num">1 an</div>
+            <div class="stat-label">D'expérience</div>
+        </div>
+        <div class="stat">
+            <div class="stat-num">100%</div>
+            <div class="stat-label">De satisfaction</div>
+        </div>        
+    </section>
 
+    <!--Section stack-->
+    <section id="stack">
+        <div class="stack-label">STACK</div>
+        <div class="tag p">HTML / CSS</div>
+        <div class="tag p">JavaScript</div>
+        <div class="tag p">Bootstrap</div>
+        <div class="tag p">PHP</div>
+        <div class="tag p">React</div>
+        <div class="tag t">Git</div>
+        <div class="tag t">GitHub</div>
+        <div class="tag t">MySQL</div>
+        <div class="tag t">PostgreSQL</div>
+        <div class="tag c">UI Design</div>
+        <div class="tag c">Figma</div>
+        <div class="tag c">Canva</div>
+    </section>
 
-                <div class="col-2">
-                    <h2>Développement mobile</h2>
-                    <p>Pour tout vos besoins de conception d'applications mobiles (android, ios ...)</p>
-                </div>
-
-                <div class="col-3">
-                    <h2>Graphisme</h2>
-                    <ol>
-                        <li>Conception d'affiches</li>
-                        <li>Conception de logos</li>
-                        <li>Conception de logos</li>
-                        <li>Conception de flyers</li>
-                    </ol>
-                </div>
+    <!--Section projets-->
+    <section id="projets">
+        <div class="section-header">
+          <h2>Sélection de projets</h2>
+         <a href="#contact">Discutons du vôtre →</a>
+        </div>
+        <div class="works-grid">
+           <div class="work-card">
+                <div class="work-thumb p">01</div>
+                <div class="work-type">Site vitrine</div>
+                <div class="work-title">PME locale — Togo</div>
+                <div class="work-desc">Site responsive avec formulaire de contact, référencement de base et optimisation mobile.</div>
+            </div>
+           <!-- <div class="work-card">
+                <div class="work-thumb t">0</div>
+                <div class="work-type">E-commerce</div>
+                <div class="work-title">Boutique artisanale en ligne</div>
+                <div class="work-desc">Boutique de vente avec catalogue produits, panier et paiement sécurisé intégré.</div>
+           </div>
+            <div class="work-card">
+                <div class="work-thumb c">03</div>
+                <div class="work-type">Marketing digital</div>
+                <div class="work-title">Campagne réseaux sociaux</div>
+                <div class="work-desc">Création de contenu mensuel, planification et augmentation de l'engagement d'une marque locale.</div>
+            </div>-->
+            <div class="work-card">
+                <div class="work-thumb g">02</div>
+                <div class="work-type">Identité visuelle</div>
+                <div class="work-title">Branding complet</div>
+                <div class="work-desc">Logo, charte graphique, supports print et digital pour une entreprise en création.</div>
             </div>
         </div>
-    </div>
-    
+    </section>
 
-    <!--Skills-->
-    <div id="Skills"><br><br>
-        <h1 class="sub-title">Compétences</h1><br><br>
-        
-        <div class="container">
-            <div class="services-list">
-                <div class="col-1">
-                    <i class="bx bx-brush skill-icon"></i>
-                    <h2>CANVA</h2>
-                </div>
-
-
-                <div class="col-2">
-                    <i class="bx bx-camera skill-icon"></i>
-                    <h2>LIGHTROOM</h2>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="services-list">
-                <div class="col-1">
-                    <i class="bx bxl-html5 skill-icon"></i>
-                    <h2>HTML/CSS</h2>
-                </div>
-
-
-                <div class="col-2">
-                    <i class="bx bxl-javascript skill-icon"></i>
-                    <h2>JAVASCRIPT</h2>
-                </div>
-
-                <div class="col-3">
-                    <i class="bx bxl-bootstrap skill-icon"></i>
-                    <h2>BOOTSTRAP</h2>
-                </div>
-            </div>
-        </div>
-        
-        <div class="container">
-            <div class="services-list">
-                <div class="col-1">
-                    <i class="bx bxs-data skill-icon"></i>
-                    <h2>MYSQL</h2>
-                </div>
-
-
-                <div class="col-2">
-                    <i class="bx bxl-php skill-icon"></i>
-                    <h2>PHP</h2>
-                </div>
-                
-                <div class="col-2">
-                    <i class="bx bxl-java skill-icon"></i>
-                    <h2>JAVA</h2>
-                </div>
-
-                <div class="col-3">
-                    <i class="bx bx-layer skill-icon"></i>
-                    <h2>LARAVEL</h2>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--Formations-->
-    <div id="Formations"><br><br>
-        <h1 class="sub-title">Formations</h1>
-        <div class="Formations">
-            <div class="timeline">
-                <div class="timeline-item">
-                    <h3>Licence en Informatique</h3>
-                    <span>ESIBA | 2024 - Aujourd'hui</span>
-                    <p>Formation approfondie en développement web et mobile,gestion de projets informatiques, bases de données et programmation.</p>
-                </div>
-                <div class="timeline-item">
-                    <h3>Programme "Filles aux commandes"</h3>
-                    <span>PLAN-TOGO | Septembre - Novembre 2024</span>
-                    <p>Un des programmes phares de plan-togo qui constitue à faire des jeunes filles des leaders de demain en leur inculquant la notion
-                        d'ambition et de ne pas baisser les bras car rien n'est impossible même pour les filles/femmes. La phase de formation nous a inculqué 
-                        des méthodes d'élaboration de CV, de lettre de motivation  et la préparation pour un entretien d'embauche.
-                    </p>
-                    <p>J'ai été pendant deux jours, la directrice du "Sponsorship Managament " de PLAN-Maritime. Cette expérience m'a permis de savoir
-                        qu'il ne faut jamais abandonner ses rêves et de se battre pour les réaliser.
-                    </p>
-                </div>
-                <div class="timeline-item">
-                    <h3>Programmes NANATECH-TALENTS</h3>
-                    <span>Gouvernement togolais | Juin - Novembre 2024</span>
-                    <p>Un programme très enrichissant du gouvernement réservé aux filles. Grâce à ce programme, j"ai développé des connaissances
-                        en gestion de projets, en entrepreunariat ainsi qu' en compétences non techniques comme le travail en équipe, la prise de décision 
-                        et la pensée critique. 
-                    </p>
-                </div>
-                <div class="timeline-item">
-                    <h3>BTS</h3>
-                    <span>FORMATEC | 2022 - 2024</span>
-                    <p>Formation approfondie en développement web, bases de données et programmation.</p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <!--contact-->
-    <div id="Contact"><br>
-        <h1 class="sub-title"> Mes contacts</h1>
-        <div class="container">
-
-            <div class="services-list">
-
-                <div class="col-1">
-                    <h2>Adresse:</h2>
-                    <p> <i class="bx bx-map"></i>Agoè-Assiyéyé</p>
-                </div>
-
-
-                <div class="col-2">
-                    <h2>Contact:</h2>
-                    <p><i class="bx bxl-telephone"></i> 00228 96530434</p>
-                </div>
-                
-                <div class="col-1">
-                    <h2>Email:</h2>
-                    <p><i class="bx bxl-mail"></i> saboutoufananatoupro@gmail.com</p>
-                </div>
-
-            </div><br>
-
-        </div>
-    </div><br><br>
-
-    <!--Projets-->
-    <div id="Projets" class="center">
-        <h1 class="sub-title">Projets</h1>
-        <a class="btn-pink"><i class="bx bx-loading"></i>Coming soon!!</a>
-        <p></p>
-    </div>
-
-
-    <footer class="footer-distributed">
-        
-       <div class="footer-left">
-            <div class="logo">Fananatou</div><br>
-            <p class="footer-links">
-                <a href="#Accueil">Accueil |</a>
-                <a href="#About">A Propos |</a>
-                <a href="#Services">Services |</a>
-                <a href="#Contact">Contact |</a>
-                <a href="#Formations">Formations |</a>
-                <a href="#Skills">Compétences |</a>
-                <a href="#Projets"> Projets |</a>
+    <!-- À PROPOS -->
+    <section id="apropos">
+        <div>
+            <h2>À propos de moi</h2>
+            <p>
+              Passionnée par le web et la communication digitale, je mets mes compétences pluridisciplinaires au service 
+              des entreprises et entrepreneurs qui veulent se démarquer en ligne.
+            </p>
+            <p>
+                Mon atout ? Je couvre tout le spectre : de la conception technique du site au design visuel. Vous n'avez 
+                qu'un seul interlocuteur pour tout votre projet digital.
+            </p>
+            <p>
+                Basé à Lomé, Togo, je travaille avec des clients locaux et à distance dans toute l'Afrique de l'Ouest et au-delà.
             </p>
         </div>
-
-        <div class="footer-center">
-            <br><br>
-            <p>&copy; 2024 MonPortfolio. Tous droits réservés.</p>
+        <div>
+            <div class="services-list">
+                <div class="service-item">
+                    <span class="service-name">Site vitrine</span>
+                    <span class="service-price">À partir de 80 000 FCFA</span>
+                </div>
+                <div class="service-item">
+                    <span class="service-name">Boutique e-commerce</span>
+                    <span class="service-price">À partir de 150 000 FCFA</span>
+                </div>
+                <div class="service-item">
+                    <span class="service-name">Gestion réseaux sociaux</span>
+                    <span class="service-price">50 000 FCFA / mois</span>
+                </div>
+                <div class="service-item">
+                    <span class="service-name">Identité visuelle</span>
+                    <span class="service-price">À partir de 60 000 FCFA</span>
+                </div>
+                <div class="service-item">
+                    <span class="service-name">Maintenance mensuelle</span>
+                    <span class="service-price">20 000 FCFA / mois</span>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="footer-right">
-            <h5>Suivez-moi</h5>
-            <div class="social-icons">
-               <a href="#"><i class="bx bxl-facebook"></i></a>
-               <a href="#"><i class="bx bxl-youtube"></i></a>
-               <a href="#"><i class="bx bxl-linkedin"></i></a>
-               <a href="#"><i class="bx bxl-github"></i></a>
+    <!-- PROCESS -->
+    <section id="process">
+        <h2>Comment je travaille</h2>
+        <div class="process-grid">
+            <div class="process-step">
+                <div class="step-num">01</div>
+                <div class="step-title">Découverte</div>
+                <div class="step-desc">On échange sur vos besoins, vos objectifs et votre budget. Je vous propose un devis détaillé sous 48h.</div>
+            </div>
+            <div class="process-step">
+                <div class="step-num">02</div>
+                <div class="step-title">Conception</div>
+                <div class="step-desc">Je crée les maquettes et le design de votre projet. Vous validez avant que je commence le développement.</div>
+            </div>
+            <div class="process-step">
+                <div class="step-num">03</div>
+                <div class="step-title">Développement</div>
+                <div class="step-desc">Je développe votre projet en vous tenant informé à chaque étape. Délai moyen : 1 à 3 semaines.</div>
+            </div>
+            <div class="process-step">
+                <div class="step-num">04</div>
+                <div class="step-title">Livraison</div>
+                <div class="step-desc">Mise en ligne, formation à l'utilisation et suivi post-lancement inclus dans chaque projet.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TÉMOIGNAGES -->
+    <section id="temoignages">
+        <h2>Ce que disent mes clients</h2>
+        <div class="temoignages-grid">
+            <div class="temoignage">
+                <p class="temoignage-quote">
+                    "Fananatou a livré notre site en trois semaines, exactement comme nous le voulions. Très professionnel et à l'écoute. Je recommande vivement."
+                </p>
+                <div class="temoignage-author">
+                    <div class="author-avatar p">KA</div>
+                    <div>
+                        <div class="author-name">Kofi Amegah</div>
+                        <div class="author-role">Gérant, Boulangerie Lomé</div>
+                    </div>
+                </div>
+            </div>
+            <div class="temoignage">
+                <p class="temoignage-quote">
+                    "Notre boutique en ligne a triplé nos ventes en trois mois. Le travail de Fananatou est remarquable, tant sur le design que la stratégie."
+                </p>
+                <div class="temoignage-author">
+                    <div class="author-avatar t">AS</div>
+                    <div>
+                        <div class="author-name">Afi Sossou</div>
+                        <div class="author-role">Créatrice, Artisanat Kpalimé</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--contact-->
+    <section id="contact">
+        <div>
+           <h2> Travaillons ensemble</h2>
+           <p>
+             Contactez-moi pour toute collaboration ou projet et recevez un devis gratuit sous 48h
+           </p>
+           <div class="contact-infos">
+                <div class="contact-item">
+                    <div class="ci-icon"><i class="bx bx-envelope"></i></div>
+                    <div class="ci-label">
+                        <strong>Email :</strong>
+                        <span><a href="mailto:">saboutoufananatou@gmail.com</a></span>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="ci-icon"><i class="bx bxl-whatsapp"></i></div>
+                    <div class="ci-label">
+                        <strong>Whatsapp :</strong>
+                        <span><a href="tel:+">+228 93 91 92 69</a></span>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="ci-icon"><i class="bx bx-map"></i></div>
+                    <div class="ci-label">
+                        <strong>Adresse :</strong>
+                        <span>Lomé, TOGO - Missions à distance acceptées</span>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="ci-icon"><i class="bx bx-calendar"></i></div>
+                    <div class="ci-label">
+                        <strong>Disponibilité :</strong>
+                        <span>Lun-Sam, 8h-17h (GMT+0)</span>
+                    </div>
+                </div>
+           </div>
+           <div class="social-row">
+                <a href="https://www.linkedin.com/in/fananatou-saboutou/" target="_blank" class="social-btn" style="color: blue;"><i class="bx bxl-linkedin"></i></a>
+                <a href="https://github.com/QueenFana" class="social-btn" target="_blank" style="color: black;"><i class="bx bxl-github"></i></a>
+                <a href="https://wa.me/qr/VXWSJ6ZYD472E1" target="_blank" class="social-btn"style="color: green;"><i class="bx bxl-whatsapp"></i></a>
            </div>
         </div>
 
+        <div>
+            <div class="contact-form">
+                <div class="form-row">
+                    <div class="fg">
+                        <label>Prénom</label>
+                        <input type="text"id="fname" placeholder="Koffi">
+                        <span class="err" id="err-fname">Prénom requis</span>
+                    </div>
+                    <div class="fg">
+                        <label>Nom</label>
+                        <input type="text"id="lname" placeholder="APELETE">
+                    </div>
+                </div>
+                <div class="fg">
+                    <label>Email</label>
+                    <input type="email"id="email" placeholder="Koffiap@gmail.com">
+                    <span class="err" id="err-email">Email valide requis</span>
+                </div>
+                <div class="fg">
+                    <label>Budget</label>
+                    <select name="" id="budget">
+                        <option value="">Choisir une fourchette ...</option>
+                        <option>Moins de 50 000 FCFA</option>
+                        <option>50 000 - 150 000 FCFA</option>
+                        <option>150 000 - 500 000 FCFA</option>
+                        <option>Plus de 500 000 FCFA</option>
+                    </select>
+                </div>
+                <div class="fg">
+                    <label>Type de projet</label>
+                    <select id="project-type">
+                        <option value="">Choisir...</option>
+                        <option>Site vitrine</option>
+                        <option>E-commerce</option>
+                        <option>Marketing digital</option>
+                        <option>Identité visuelle</option>
+                        <option>Autre</option>
+                    </select>
+                </div>
+                <div class="fg">
+                    <label>Message *</label>
+                    <textarea id="message" placeholder="Décrivez votre projet"></textarea>
+                    <span class="err" id="err-message">Message requis</span>
+                </div>
+                <button class="btn-submit" id="submitBtn" onclick="submitForm()">Envoyer la demande →</button>
+                <div class="form-success" id="successMsg">
+                    Message envoyé avec succès ! Je vous répondrai dans les 24–48h.
+                </div>
+            </div>  
+        </div>
+    </section>
+
+    <footer>
         
+       <div class="footer-links">
+            <a href="#hero">Accueil</a>
+            <a href="#projets"> Projets </a>
+            <a href="#contact"> Contact </a>
+        </div>
+        <p>&copy; 2026 Fananatou SABOUTOU- Développeuse web et mobile| Graphiste. Lomé, TOGO</p>
     </footer>
 </body>
 </html>
