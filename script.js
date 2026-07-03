@@ -7,38 +7,40 @@ navToggle.addEventListener('click', () => {
     navActive.classList.toggle('active');
 });
 
-function submitForm(){
-    let valid= true;
-    document.querySelectorAll('.err').forEach(e => e.style.display = 'none');
-    document.querySelectorAll('.fg input, .fg textarea').forEach(el => {
-        el.style.borderColor = 'rgba(0, 0, 0, 0.18)';
-    });
+function submitForm() {
+  // Validation
+  const fname = document.getElementById('fname').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
 
-    const fname = document.getElementById('fname');
-    if(!fname.value.trim()){
-        document.getElementById('err-fname').style.display = 'block';
-        fname.style.borderColor = '#c0392b'; valid = false;
+  if (!fname || !email || !message) {
+    alert('Remplissez les champs obligatoires.');
+    return;
+  }
+
+  const btn = document.getElementById('submitBtn');
+  btn.textContent = 'Envoi en cours...';
+  btn.disabled = true;
+
+  // Envoi via EmailJS
+  emailjs.send(
+    "service_c1xp6wm",
+    "template_mo5io0d",
+    {
+      from_name: fname + ' ' + document.getElementById('lname').value,
+      from_email: email,
+      project_type: document.getElementById('project-type').value,
+      message: message
     }
-
-     const email = document.getElementById('email');
-    if (!email.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
-      document.getElementById('err-email').style.display = 'block';
-      email.style.borderColor = '#c0392b'; valid = false;
-    }
-
-    const msg = document.getElementById('message');
-    if (!msg.value.trim()) {
-      document.getElementById('err-message').style.display = 'block';
-      msg.style.borderColor = '#c0392b'; valid = false;
-    }
-
-    if (!valid) return;
-
-    document.getElementById('submitBtn').style.display = 'none';
+  ).then(() => {
+    btn.style.display = 'none';
     document.getElementById('successMsg').style.display = 'block';
-    ['fname','lname','email','message'].forEach(id => document.getElementById(id).value = '');
-    document.getElementById('budget').value = '';
-    document.getElementById('project-type').value = '';
+  }).catch((err) => {
+    btn.textContent = 'Envoyer le message →';
+    btn.disabled = false;
+    alert('Erreur d\'envoi. Réessayez.');
+    console.error(err);
+  });
 }
 
 document.querySelectorAll('a[href^="#"]').forEach(a => {
